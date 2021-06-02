@@ -23,6 +23,8 @@
       <th>Altura promedio</th>
       <th>Peso Máximo</th>
       <th>Altura Máxima</th>
+      <th>Altura</th>
+      <th>Peso</th>
     </tr>
   </thead>
 
@@ -32,6 +34,12 @@
       <td><%= @pet.avg_height %></td>
       <td><%= @pet.max_weight %></td>
       <td><%= @pet.max_height%></td>
+      <% @pet.pet_histories.each do |history|%>
+        <td><%=history.heigth%></td>
+      <% end %>
+      <% @pet.pet_histories.each do |history|%>
+          <td><%=history.weight%></td>
+          <% end %>
     </tr>
   </tbody>
 </table>
